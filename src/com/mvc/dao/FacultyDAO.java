@@ -15,43 +15,10 @@ public class FacultyDAO
 	{
 		con=DBConnection.getConnection();
 	}
-	/*
-	 public String newfaculty(Faculty f) throws Exception 
-	 {
-		// 	DBconnection dbcon=new DBconnection();
-		 	//PreparedStatement p = null;
-		 	try {
-	 //   	Connection con=dbcon.getConnection();
-	    /*	
-	    	Statement st = con.createStatement();
-		    ResultSet rs;
-		    rs = st.executeQuery("insert into faculty(username,name,email_id,contact,address,password) values("+f.getUserName()+","+ f.getName()+","+f.getEmail_id() + ","+f.getContact()+"," +f.getAdrress() +","+f.getPassword()+ ")");
-		*/
-		 		/*
-    	String insert_query = "INSERT INTO faculty(username,name,email_id,contact,address,password) VALUES (?, ?, ?, ?, ?, ?)";
-	        PreparedStatement ps= (PreparedStatement) con.prepareStatement(insert_query) ;
-	        ps.setString(1, f.getUserName());
-	        ps.setString(2, f.getName());
-	        ps.setString(3, f.getEmail_id());
-	        ps.setLong(4, f.getContact());
-	        ps.setString(5, f.getAdrress());
-	        ps.setString(6, f.getPassword());
 	
-	      
-	        int i= ps.executeUpdate();
-	        if(i!=0) 
-	        	return "SUCCESS";
-	        ps.close();    
-	        con.close();
-		  
-		 	}catch(SQLException e){
-		 		e.printStackTrace();
-		 	}
-		 	return "F";
-	    }   */
 	
-	 public String updateFaculty(FacultyBean f) throws Exception 
-	 {
+	public String updateFaculty(FacultyBean f) throws Exception 
+	{
 		
 		 try {
 	
@@ -77,7 +44,7 @@ public class FacultyDAO
 		 		e.printStackTrace();
 		 	}
 		 	return "F";
-	    }
+	 }
 	 
 	 
 	 public FacultyBean getFacultyRecord(int Faculty_ID) throws SQLException
