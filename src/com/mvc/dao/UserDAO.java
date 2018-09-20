@@ -15,20 +15,13 @@ public class UserDAO {
 	}
 
 	public String AddUser(UserBean ub) throws Exception {
-		// DBconnection dbcon=new DBconnection();
-		// PreparedStatement p = null;
+		
 		try {
-			// Connection con=dbcon.getConnection();
-			/*
-			 * Statement st = con.createStatement(); ResultSet rs; rs = st.
-			 * executeQuery("insert into faculty(username,name,email_id,contact,address,password) values("
-			 * +f.getUserName()+","+ f.getName()+","+f.getEmail_id() +
-			 * ","+f.getContact()+"," +f.getAdrress() +","+f.getPassword()+ ")");
-			 */
+			
 			int j = 0;
 			int k = 0;
 			String insert_query = "INSERT INTO user(User_ID,Password,Status) VALUES (?, ?, ?)";
-			// String iQuery = "insert into 'User' (Users_ID, Password, Status) VALUES ()";
+			
 			PreparedStatement ps = (PreparedStatement) con.prepareStatement(insert_query);
 
 			ps.setInt(1, ub.getUser_ID());
